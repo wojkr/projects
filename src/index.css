@@ -1,39 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Bebas+Neue&family=Permanent+Marker&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Anonymous Pro", monospace, Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  @apply text-main-dark;
+  @apply bg-main-white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
-a {
+a,
+li {
+  font-family: "Permanent Marker", cursive, Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
   font-weight: 500;
-  color: #646cff;
+  @apply text-orange-dark;
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  @apply text-main-black;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", cursive, Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
+.animation {
+  transition-duration: 400ms;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  cursor: default;
+  user-select: none;
+}
+.animation-small-from-top-inactive {
+  transform: translate3d(0, -1.5rem, 0);
+  opacity: 0;
+}
+.animation-stack-inactive {
+  transform: translate3d(0, -1.5rem, 0);
+  opacity: 0;
+}
+.animation-from-top-100-inactive {
+  transform: translate3d(0, -100%, 0);
+}
+.animation-from-right-100-inactive {
+  transform: translate3d(100%, 0, 0);
+}
+.animation-from-down-100-inactive {
+  transform: translate3d(0, 100%, 0);
+}
+.animation-from-left-100-inactive {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.title {
+  font-size: 6vw;
   line-height: 1.1;
+  margin: 0 1rem;
+  border: 0.7vw solid;
+  border-left: none;
+  border-right: none;
+  padding: 0.2rem 0.8rem;
+  width: min-content;
+  height: min-content;
 }
 
 button {
@@ -43,12 +91,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  @apply bg-main-black;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  @apply border-orange-dark;
 }
 button:focus,
 button:focus-visible {
@@ -57,13 +105,121 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #fff;
+    @apply text-main-white;
+    @apply bg-main-dark;
   }
   a:hover {
-    color: #747bff;
+    @apply text-orange-dark;
   }
   button {
-    background-color: #f9f9f9;
+    @apply bg-main-dark;
   }
+}
+
+.style-text {
+  font-size: 1.2vw;
+}
+.style-stack,
+.style-link {
+  font-size: 1.5vw;
+}
+.style-title-1 {
+  @apply text-main-black;
+  @apply border-main-black;
+}
+.style-stack-1 {
+  @apply text-orange-dark;
+}
+.style-text-1 {
+  @apply text-main-dark;
+}
+.style-link-text-1 {
+  @apply text-main-dark;
+}
+.style-link-1 {
+  @apply text-orange-dark;
+}
+.style-link-1:hover {
+  @apply text-main-black;
+}
+.style-link-back-1 {
+}
+
+.style-title-2 {
+  color: #cc1b28;
+  border-color: #cc1b28;
+}
+.style-stack-2 {
+  color: #35222f;
+}
+.style-text-2 {
+  color: #35222f;
+}
+.style-link-text-2 {
+  color: #91ffe9;
+}
+.style-link-2 {
+  color: #35222f;
+}
+.style-link-2:hover {
+  color: #cc1b28;
+}
+.style-link-back-2 {
+  color: #91ffe9;
+}
+.style-link-back-2:hover {
+  color: #cc1b28;
+}
+
+.style-title-3 {
+  color: #35222f;
+  border-color: #35222f;
+}
+.style-stack-3 {
+  color: #cc1b28;
+}
+.style-text-3 {
+  color: #35222f;
+}
+.style-link-text-3 {
+  color: #35222f;
+}
+.style-link-3 {
+  color: #4b8695;
+}
+.style-link-3:hover {
+  color: #cc1b28;
+}
+.style-link-back-3 {
+  color: #35222f;
+}
+.style-link-back-3:hover {
+  color: #4b8695;
+}
+
+.style-title-4 {
+  color: #410c12;
+  border-color: #410c12;
+}
+.style-stack-4 {
+  color: #6477a5;
+}
+.style-text-4 {
+  color: #752e36;
+}
+.style-link-text-4 {
+  color: #752e36;
+}
+.style-link-4 {
+  color: #2e4272;
+}
+.style-link-4:hover {
+  color: #6477a5;
+}
+.style-link-back-4 {
+  color: #6477a5;
+}
+.style-link-back-4:hover {
+  color: #2e4272;
 }

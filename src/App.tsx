@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import Show from "./show/Show";
+import List from "./list/List";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentPage, setCurrentPage] = useState(
+    Number(window.location.hash.slice(1))
+  );
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+
+      setCurrentPage(hash?.length > 0 ? Number(hash.slice(1)) : 0);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="flex min-h-screen w-[100dvw] flex-col bg-gray-100">
+      <Show currentPage={1} isActive={currentPage === 1} />
+      <Show currentPage={2} isActive={currentPage === 2} />
+      <Show currentPage={3} isActive={currentPage === 3} />
+      <Show currentPage={4} isActive={currentPage === 4} />
+      {!currentPage && <List />}
+    </div>
+  );
 }
 
-export default App
+export default App;
