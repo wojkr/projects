@@ -3,9 +3,9 @@ import Title from "./Title";
 import Description from "./Description";
 import Stack from "./Stack";
 import LinkToLive from "./LinkToLive";
-import pic1 from "../assets/sweet-comp.png";
+import pic1 from "../assets/nomad-comp.png";
 import pic2 from "../assets/sweet-comp.png";
-import pic3 from "../assets/block-comp.png";
+import pic3 from "../assets/block-comp-phone.png";
 import pic4 from "../assets/solar-comp.png";
 import LinkGoBack from "./LinkGoBack";
 
