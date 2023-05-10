@@ -1,7 +1,8 @@
 export const projects = [
   {
     name: "NOMAD HIVE",
-    shortDescription: "Short DESC1",
+    shortDescription:
+      "An online marketplace app built with React, Next.js, Prisma, and MongoDB",
     description:
       "This is an online marketplace app that connects travelers with short-term homestays and experiences worldwide. Built with React, Next.js, Prisma, and MongoDB, this platform provides a fast, secure, and scalable experience for both travelers and hosts.",
     url: "/#1",
@@ -11,7 +12,8 @@ export const projects = [
   },
   {
     name: "SWEET APP",
-    shortDescription: "Short DESC2",
+    shortDescription:
+      " Full stack website with interactive Map, authentication, user accounts, desserts section (CRUD)",
     description: `
     Full stack website with interactive Map, authentication, user
     accounts, desserts section (CRUD) with ratings & reviews.

@@ -34,7 +34,7 @@ const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
     }
   );
   const mainClass =
-    "absolute left-0 top-0 z-10 min-h-[100dvh] w-[100dvw] flex flex-col justify-between xs:flex-row px-2 xs:w-4/5 xs:ml-[10%] md:w-3/5 md:ml-[20%]";
+    "absolute left-0 top-0 z-10 min-h-[100dvh] w-[100dvw] flex flex-col justify-between xs:flex-row pl-2 md:w-4/5 md:ml-[10%] xxl:w-3/5 xxl:ml-[20%] ";
   const inactiveMainClass = mainClass + " left-[-10000px]";
 
   return (
@@ -42,8 +42,8 @@ const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
       {/* CONTENT */}
       <div className={isActive ? mainClass : inactiveMainClass}>
         {/* COLUMN LEFT */}
-        <div className="h-100 flex flex-col justify-evenly px-2 sm:w-1/2">
-          <div className="flex flex-row justify-between sm:mb-12">
+        <div className="h-100 mt-5 flex flex-col justify-evenly px-2 xs:mt-0 sm:w-2/5 xxxl:w-1/2">
+          <div className="flex flex-row justify-between">
             <Title
               text={project.name}
               currentPage={currentPage}
@@ -55,6 +55,7 @@ const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
               isActive={isActive}
             />
           </div>
+
           <Description
             text={project.description}
             currentPage={currentPage}
@@ -70,7 +71,7 @@ const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
           </div>
         </div>
         {/* COLUMN RIGHT */}
-        <div className="h-100 flex flex-col justify-evenly px-2 sm:w-1/2">
+        <div className="h-100 flex flex-col justify-evenly sm:w-3/5 xxxl:w-1/2">
           <img src={pic} alt="" />
         </div>
       </div>
