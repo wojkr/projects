@@ -49,11 +49,14 @@ const List = () => {
         ))}
       </div>
       <hr />
-      <div id="" className="mt-auto text-center text-xl">
-        &copy; Wojciech Krupa 2023{" "}
+      <div
+        id=""
+        className="letter mt-auto py-[20px] text-center text-xl tracking-wide"
+      >
+        &copy;Wojciech Krupa 2023{" "}
         <a
           href="https://wojkr.github.io/portfolio-page/"
-          className=" font-title text-main-dark"
+          className=" font-title tracking-widest text-secondary-500"
         >
           @wojkr
         </a>
