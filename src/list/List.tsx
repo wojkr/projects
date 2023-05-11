@@ -22,7 +22,7 @@ const List = () => {
         {projects.map((project, index) => (
           <a
             key={index}
-            href={"projects" + project.url}
+            href={"projects/"+project.url}
             rel="noopener noreferrer"
             className="block bg-white/60  font-normal transition duration-300 ease-in-out hover:bg-white md:rounded-s-full"
           >
