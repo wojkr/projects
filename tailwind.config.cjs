@@ -28,7 +28,12 @@ module.exports = {
         normal: ["Anonymous Pro", "monospace"],
         title: ["Bebas Neue", "cursive"],
       },
-      content: {},
+      content: {
+        bg: "url('../public/assets/bg.png')",
+      },
+      transitionDelay: {
+        600: "600ms",
+      },
     },
     screens: {
       xs: "480px",

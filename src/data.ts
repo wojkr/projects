@@ -54,9 +54,9 @@ export const backgroundLayout = [
     "animation fixed left-[50%] top-[100%] z-0 h-[0%] w-[50%] bg-[#F5E9BE]",
   ],
   [
-    "animation fixed left-0 top-0 z-0 w-[50%] h-[66%] bg-[#91FFE9]",
+    "animation fixed left-0 top-0 z-0 w-[50%] h-[75%] bg-[#91FFE9]",
     "animation fixed left-[50%] top-0 z-0 h-[33%] w-[50%] bg-[#91FFE9]",
-    "animation fixed left-0 top-[66%] h-[34%] w-[50%] bg-[#1E5562]",
+    "animation fixed left-0 top-[75%] h-[25%] w-[50%] bg-[#1E5562]",
     "animation fixed left-[50%] top-[33%] z-0 h-[67%] w-[50%] bg-[#35222F]",
   ],
   [

@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex min-h-screen w-[100dvw] flex-col bg-gray-50">
+    <div className="bg-pic flex min-h-screen w-[100dvw] flex-col bg-gray-50 ">
       <Show currentPage={1} isActive={currentPage === 1} />
       <Show currentPage={2} isActive={currentPage === 2} />
       <Show currentPage={3} isActive={currentPage === 3} />

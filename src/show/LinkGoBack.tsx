@@ -10,7 +10,7 @@ const LinkGoBack: React.FC<LinkToLiveProps> = ({ currentPage, isActive }) => {
     <div className={`${isActive ? activeClass : inactiveClass}`}>
       <a
         href="/#"
-        className={`style-stack font-marker style-link-back-${currentPage}`}
+        className={`style-link-back font-marker style-link-back-${currentPage}`}
       >
         Go
         <br /> Back

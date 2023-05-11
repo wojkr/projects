@@ -72,6 +72,10 @@ h6 {
   transform: translate3d(-100%, 0, 0);
 }
 
+.bg-pic {
+  background-image: url(assets/bg.svg);
+}
+
 .title {
   font-size: 6vw;
   line-height: 1.1;
@@ -121,7 +125,8 @@ button:focus-visible {
   font-size: 1.2vw;
 }
 .style-stack,
-.style-link {
+.style-link,
+.style-link-back {
   font-size: 1.5vw;
 }
 .style-title-1 {
@@ -222,4 +227,107 @@ button:focus-visible {
 }
 .style-link-back-4:hover {
   color: #2e4272;
+}
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .style-text {
+    font-size: 1rem;
+  }
+  .style-stack,
+  .style-link,
+  .style-link-back {
+    font-size: 1.2rem;
+  }
+  .style-link-text-1 {
+    background-color: #f5e9be;
+    padding: 0.4rem;
+    padding-left: 2.5rem;
+    border-start-start-radius: 9999px;
+    border: 2px solid #ff9666;
+  }
+  .style-link-back-1 {
+    background-color: #fff;
+    padding: 0.4rem;
+    padding-left: 2.5rem;
+    border: 2px solid #ff9666;
+    border-top: none;
+    border-end-start-radius: 9999px;
+  }
+
+  .style-text-2 {
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 1rem;
+    border: 2px solid #1e5562;
+  }
+  .style-link-text-2 {
+    background-color: #1e5562;
+    padding: 0.4rem;
+    padding-left: 2.5rem;
+    border-start-start-radius: 9999px;
+    border: 2px solid #cc1b28;
+  }
+  .style-link-back-2 {
+    color: #35222f;
+    background-color: #91ffe9;
+    padding: 0.4rem;
+    padding-left: 2.5rem;
+    border: 2px solid #cc1b28;
+    border-top: none;
+    border-end-start-radius: 9999px;
+  }
+  .style-link-text-3 {
+    padding: 0.4rem;
+    padding-left: 2.5rem;
+    border-start-start-radius: 9999px;
+    border: 2px solid #4b8695;
+  }
+
+  .style-link-back-3 {
+    /* color: #35222f; */
+    padding: 0.4rem;
+    padding-left: 2.5rem;
+    border: 2px solid #4b8695;
+    border-top: none;
+    border-end-start-radius: 9999px;
+  }
+
+  .style-text-4 {
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 1rem;
+    border: 2px solid #410c12;
+  }
+  .style-link-text-4 {
+    background-color: #d6c287;
+    padding: 0.4rem;
+    padding-left: 2.5rem;
+    border-start-start-radius: 9999px;
+    border: 2px solid #410c12;
+  }
+  .style-link-back-4 {
+    color: #35222f;
+    background-color: #91ffe9;
+    padding: 0.4rem;
+    padding-left: 2.5rem;
+    border: 2px solid #410c12;
+    border-top: none;
+    border-end-start-radius: 9999px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .style-text {
+    font-size: 0.7rem;
+  }
+  .style-stack,
+  .style-link,
+  .style-link-back {
+    font-size: 0.8rem;
+  }
 }

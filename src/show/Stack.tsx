@@ -6,7 +6,7 @@ interface StackProps {
 }
 
 const Stack: React.FC<StackProps> = ({ stackList, currentPage, isActive }) => {
-  const activeClass = `animation delay-300 text-right font-marker style-stack style-stack-${currentPage}`;
+  const activeClass = `animation delay-300 text-right font-marker style-stack-${currentPage} style-stack `;
   const inactiveClass = activeClass + " animation-small-from-top-inactive";
   return (
     <div className={isActive ? activeClass : inactiveClass}>

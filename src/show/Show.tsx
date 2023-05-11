@@ -3,26 +3,16 @@ import Title from "./Title";
 import Description from "./Description";
 import Stack from "./Stack";
 import LinkToLive from "./LinkToLive";
-import pic1 from "../assets/nomad-comp.png";
-import pic2 from "../assets/sweet-comp.png";
-import pic3 from "../assets/block-comp-phone.png";
-import pic4 from "../assets/solar-comp.png";
 import LinkGoBack from "./LinkGoBack";
+import Picture from "./Picture";
+import Background from "./Background";
 
 interface ShowProps {
   currentPage: number;
   isActive: boolean;
 }
 
-const getPic = (currentPage: number) => {
-  if (currentPage === 1) return pic1;
-  if (currentPage === 2) return pic2;
-  if (currentPage === 3) return pic3;
-  if (currentPage === 4) return pic4;
-};
-
 const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
-  const pic = getPic(currentPage);
   const project = projects[currentPage - 1];
   const activeBackgroundClassNames = backgroundLayout[currentPage - 1]; //animatioin class sets up elemet properties when active
   const inactiveBackgroundClassNames = activeBackgroundClassNames.map(
@@ -34,7 +24,7 @@ const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
     }
   );
   const mainClass =
-    "absolute left-0 top-0 z-10 min-h-[100dvh] w-[100dvw] flex flex-col justify-between xs:flex-row pl-2 md:w-4/5 md:ml-[10%] xxl:w-3/5 xxl:ml-[20%] ";
+    "absolute left-0 top-0 z-10 min-h-[100dvh] w-[100dvw] flex flex-col justify-center xs:justify-between xs:flex-row pl-0 xs:pl-2 md:w-4/5 md:ml-[10%] xxl:w-3/5 xxl:ml-[20%] ";
   const inactiveMainClass = mainClass + " left-[-10000px]";
 
   return (
@@ -55,13 +45,12 @@ const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
               isActive={isActive}
             />
           </div>
-
           <Description
             text={project.description}
             currentPage={currentPage}
             isActive={isActive}
           />
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-col-reverse justify-between xs:flex-row">
             <LinkGoBack currentPage={currentPage} isActive={isActive} />
             <LinkToLive
               currentPage={currentPage}
@@ -72,43 +61,16 @@ const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
         </div>
         {/* COLUMN RIGHT */}
         <div className="h-100 flex flex-col justify-evenly sm:w-3/5 xxxl:w-1/2">
-          <img src={pic} alt="" />
+          <Picture isActive={isActive} currentPage={currentPage} />
         </div>
       </div>
-
       {/* BACKGROUND */}
-      {/* TOP-LEFT  */}
-      <div
-        className={
-          isActive
-            ? activeBackgroundClassNames[0]
-            : inactiveBackgroundClassNames[0]
-        }
-      ></div>
-      {/* TOP-RIGHT  */}
-      <div
-        className={
-          isActive
-            ? activeBackgroundClassNames[1]
-            : inactiveBackgroundClassNames[1]
-        }
-      ></div>
-      {/* BOTTOM-LEFT  */}
-      <div
-        className={
-          isActive
-            ? activeBackgroundClassNames[2]
-            : inactiveBackgroundClassNames[2]
-        }
-      ></div>
-      {/* BOTTOM-RIGHT  */}
-      <div
-        className={
-          isActive
-            ? activeBackgroundClassNames[3]
-            : inactiveBackgroundClassNames[3]
-        }
-      ></div>
+      <Background
+        activeBackgroundClassNames={activeBackgroundClassNames}
+        inactiveBackgroundClassNames={inactiveBackgroundClassNames}
+        isActive={isActive}
+        currentPage={currentPage}
+      />
     </>
   );
 };
