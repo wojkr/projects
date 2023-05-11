@@ -1,6 +1,8 @@
 import { projects } from "@/data";
 
 const List = () => {
+  if (window.location.href[window.location.href.length - 1] !== "#")
+    window.location.href = window.location.origin + "/projects/#";
   return (
     <div className="z-[100] mx-auto flex min-h-[100dvh] w-full flex-col justify-evenly px-2 py-12 xs:w-4/5 xs:py-24 md:w-3/5 md:px-8 md:py-32">
       <div
@@ -22,7 +24,7 @@ const List = () => {
         {projects.map((project, index) => (
           <a
             key={index}
-            href={"projects/"+project.url}
+            href={"/projects" + project.url}
             rel="noopener noreferrer"
             className="block bg-white/60  font-normal transition duration-300 ease-in-out hover:bg-white md:rounded-s-full"
           >
