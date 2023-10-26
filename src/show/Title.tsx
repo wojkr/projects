@@ -10,8 +10,7 @@ interface TitleProps {
   isActive: boolean;
 }
 const Title: React.FC<TitleProps> = ({ text, currentPage, isActive }) => {
-  // const activeClass = `title w-min border-y-4 border-solid border-y-main-black px-2 py-1 text-3xl font-extrabold tracking-tight text-main-black sm:text-4xl md:text-5xl style-title-${currentPage} animation delay-200 `;
-  const activeClass = `title w-min px-2 py-1 font-extrabold tracking-tight style-title-${currentPage} animation delay-200 `;
+  const activeClass = `title w-min px-2 border-[0.7rem solid] py-1 text-p${currentPage}-title font-extrabold tracking-tight animation delay-200 `;
   const inactiveClass = activeClass + " animation-small-from-top-inactive ";
 
   return (

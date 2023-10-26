@@ -26,12 +26,7 @@ li {
   font-family: "Permanent Marker", cursive, Inter, system-ui, Avenir, Helvetica,
     Arial, sans-serif;
   font-weight: 500;
-  @apply text-orange-dark;
   text-decoration: inherit;
-}
-
-a:hover {
-  @apply text-main-black;
 }
 
 h1,
@@ -77,34 +72,11 @@ h6 {
 }
 
 .title {
-  font-size: 6vw;
-  line-height: 1.1;
-  margin: 0 1rem;
-  border: 0.7vw solid;
+  font-size: 50px;
+  border: 10px solid;
   border-left: none;
   border-right: none;
   padding: 0.2rem 0.8rem;
-  width: min-content;
-  height: min-content;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  @apply bg-main-black;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  @apply border-orange-dark;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -113,221 +85,86 @@ button:focus-visible {
     @apply text-main-white;
     @apply bg-main-dark;
   }
-  a:hover {
-    @apply text-orange-dark;
-  }
-  button {
-    @apply bg-main-dark;
-  }
 }
 
-.style-text {
-  font-size: 1.2vw;
-}
-.style-stack,
-.style-link,
-.style-link-back {
-  font-size: 1.5vw;
-}
-.style-title-1 {
-  @apply text-main-black;
-  @apply border-main-black;
-}
-.style-stack-1 {
-  @apply text-orange-dark;
-}
-.style-text-1 {
-  @apply text-main-dark;
-}
-.style-link-text-1 {
-  @apply text-main-dark;
-}
-.style-link-1 {
-  @apply text-orange-dark;
-}
-.style-link-1:hover {
-  @apply text-main-black;
-}
-.style-link-back-1 {
-}
-
-.style-title-2 {
-  color: #cc1b28;
-  border-color: #cc1b28;
-}
-.style-stack-2 {
-  color: #35222f;
-}
-.style-text-2 {
-  color: #35222f;
-}
-.style-link-text-2 {
-  color: #91ffe9;
-}
-.style-link-2 {
-  color: #35222f;
-}
-.style-link-2:hover {
-  color: #cc1b28;
-}
-.style-link-back-2 {
-  color: #91ffe9;
-}
-.style-link-back-2:hover {
-  color: #cc1b28;
-}
-
-.style-title-3 {
-  color: #35222f;
-  border-color: #35222f;
-}
-.style-stack-3 {
-  color: #cc1b28;
-}
-.style-text-3 {
-  color: #35222f;
-}
-.style-link-text-3 {
-  color: #35222f;
-}
-.style-link-3 {
-  color: #4b8695;
-}
-.style-link-3:hover {
-  color: #cc1b28;
-}
-.style-link-back-3 {
-  color: #35222f;
-}
-.style-link-back-3:hover {
-  color: #4b8695;
-}
-
-.style-title-4 {
-  color: #410c12;
-  border-color: #410c12;
-}
-.style-stack-4 {
-  color: #6477a5;
-}
-.style-text-4 {
-  color: #752e36;
-}
-.style-link-text-4 {
-  color: #752e36;
-}
-.style-link-4 {
-  color: #2e4272;
-}
-.style-link-4:hover {
-  color: #6477a5;
-}
-.style-link-back-4 {
-  color: #6477a5;
-}
-.style-link-back-4:hover {
-  color: #2e4272;
-}
 @media screen and (max-width: 480px) {
   .title {
     font-size: 2rem;
   }
-  .style-text {
-    font-size: 1rem;
-  }
-  .style-stack,
-  .style-link,
-  .style-link-back {
-    font-size: 1.2rem;
-  }
-  .style-link-text-1 {
-    background-color: #f5e9be;
+
+  .style-link-text {
     padding: 0.4rem;
     padding-left: 2.5rem;
     border-start-start-radius: 9999px;
-    border: 2px solid #ff9666;
+    border: 2px solid;
   }
-  .style-link-back-1 {
-    background-color: #fff;
+  .style-link-back {
     padding: 0.4rem;
     padding-left: 2.5rem;
-    border: 2px solid #ff9666;
+    border: 2px solid;
     border-top: none;
     border-end-start-radius: 9999px;
   }
-
-  .style-text-2 {
+  .style-text {
     box-sizing: border-box;
-    background-color: #fff;
     padding: 1rem;
-    border: 2px solid #1e5562;
+    border: 2px solid;
+  }
+
+  .style-text-1 {
+    background-color: theme(colors.p1-bg-1);
+    border-color: theme(colors.p1-text);
+  }
+  .style-link-text-1,
+  .style-link-back-1 {
+    background-color: theme(colors.p1-bg-1);
+    border-color: theme(colors.p1-text);
+  }
+  .style-text-2 {
+    background-color: theme(colors.p2-link-back);
+    border-color: theme(colors.p2-bg-3);
   }
   .style-link-text-2 {
-    background-color: #1e5562;
-    padding: 0.4rem;
-    padding-left: 2.5rem;
-    border-start-start-radius: 9999px;
-    border: 2px solid #cc1b28;
+    background-color: theme(colors.p2-bg-3);
+    border-color: theme(colors.p2-title);
   }
   .style-link-back-2 {
-    color: #35222f;
-    background-color: #91ffe9;
-    padding: 0.4rem;
-    padding-left: 2.5rem;
-    border: 2px solid #cc1b28;
-    border-top: none;
-    border-end-start-radius: 9999px;
-  }
-  .style-link-text-3 {
-    padding: 0.4rem;
-    padding-left: 2.5rem;
-    border-start-start-radius: 9999px;
-    border: 2px solid #4b8695;
+    color: theme(colors.p2-bg-4);
+    background-color: theme(colors.p2-bg-1);
+    border-color: theme(colors.p2-title);
   }
 
+  .style-link-text-3,
   .style-link-back-3 {
-    /* color: #35222f; */
-    padding: 0.4rem;
-    padding-left: 2.5rem;
-    border: 2px solid #4b8695;
-    border-top: none;
-    border-end-start-radius: 9999px;
+    border-color: theme(colors.p3-bg-4);
+    background-color: theme(colors.p3-bg-2);
+  }
+  .style-text-3 {
+    border-color: theme(colors.p3-title);
+    background-color: theme(colors.p3-bg-2);
   }
 
-  .style-text-4 {
-    box-sizing: border-box;
-    background-color: #fff;
-    padding: 1rem;
-    border: 2px solid #410c12;
-  }
+  .style-link-back-4,
   .style-link-text-4 {
-    background-color: #d6c287;
-    padding: 0.4rem;
-    padding-left: 2.5rem;
-    border-start-start-radius: 9999px;
-    border: 2px solid #410c12;
+    background-color: theme(colors.p4-bg-1);
+    border-color: theme(colors.p4-title);
   }
-  .style-link-back-4 {
-    color: #35222f;
-    background-color: #91ffe9;
-    padding: 0.4rem;
-    padding-left: 2.5rem;
-    border: 2px solid #410c12;
-    border-top: none;
-    border-end-start-radius: 9999px;
+  .style-text-4 {
+    background-color: theme(colors.p4-bg-3);
+    border-color: theme(colors.p4-title);
+    color: theme(colors.p4-title);
+  }
+
+  .style-text-5 {
+    background-color: theme(colors.p5-bg-4);
+    border-color: theme(colors.p5-stack);
+  }
+  .style-link-back-5,
+  .style-link-text-5 {
+    background-color: theme(colors.p5-bg-1);
+    border-color: theme(colors.p5-stack);
   }
 }
 
 @media screen and (max-width: 320px) {
-  .title {
-    font-size: 1.2rem;
-  }
-  .style-text {
-    font-size: 0.7rem;
-  }
-  .style-stack,
-  .style-link,
-  .style-link-back {
-    font-size: 0.8rem;
-  }
 }

@@ -26,6 +26,7 @@ function App() {
       <Show currentPage={2} isActive={currentPage === 2} />
       <Show currentPage={3} isActive={currentPage === 3} />
       <Show currentPage={4} isActive={currentPage === 4} />
+      <Show currentPage={5} isActive={currentPage === 5} />
       {!currentPage && <List />}
     </div>
   );

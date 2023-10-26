@@ -1,7 +1,9 @@
-import linkPic1 from "../assets/art-link-1.png";
-import linkPic2 from "../assets/art-link-2.png";
-import linkPic3 from "../assets/art-link-3.png";
-import linkPic4 from "../assets/art-link-4.png";
+import linkPic from "@/assets/art-pic-link.webp";
+import useTailwind from "@/hook/useTailwind";
+//@ts-ignore
+import { hexToFilterFunc } from "@/helpers/hexToFilter.js";
+import { useState } from "react";
+// import getTailwindConfig from "@/helpers/getTailwindConfig";
 
 interface LinkToLiveProps {
   currentPage: number;
@@ -14,26 +16,48 @@ const LinkToLive: React.FC<LinkToLiveProps> = ({
   link,
   isActive,
 }) => {
-  const pics = [linkPic1, linkPic2, linkPic3, linkPic4];
-  const linkPic = pics[currentPage - 1];
+  //@ts-ignore
+  const colors = useTailwind().theme.colors;
+  const colorLink = colors[`p${currentPage}-link`];
+  const colorLinkHover = colors[`p${currentPage}-link-hover`];
 
-  const activeClass = "animation delay-500 flex flex-row justify-end";
+  const activeClass = `animation delay-500 flex flex-row justify-end text-p${currentPage}-link-text`;
   const inactiveClass = activeClass + " animation-small-from-top-inactive ";
+
+  //logic to change icon color
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const linkStyle = {
+    width: "100%",
+    height: "100%",
+    filter: hexToFilterFunc(isHovered ? colorLinkHover : colorLink),
+  };
   return (
     <a
       href={link}
       target="_blank"
       className={`${isActive ? activeClass : inactiveClass}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <div className="hidden w-[4vw] cursor-pointer place-content-center pr-[0.4rem] xs:grid">
-        <img src={linkPic} alt="" className="" />
+      <div className="hidden w-[50px] cursor-pointer place-content-center pr-[0.4rem] xs:grid">
+        <img src={linkPic} alt="" style={linkStyle} />
       </div>
       <p
-        className={`style-link font-marker style-link-text-${currentPage} cursor-pointer`}
+        className={` style-link-text style-link-text-${currentPage} font-marker text-p${currentPage}-link-text cursor-pointer`}
       >
         This project
         <br /> is
-        <span className={`style-link-${currentPage}`}> LIVE</span>
+        <span className="text-[#000]" style={linkStyle}>
+          {" "}
+          LIVE
+        </span>
       </p>
     </a>
   );

@@ -1,12 +1,9 @@
 import React from "react";
-import rings1 from "../assets/art-rings-1.png";
-import circle1 from "../assets/art-circle-1.png";
-import rings2 from "../assets/art-rings-2.png";
-import circle2 from "../assets/art-circle-2.png";
-import rings3 from "../assets/art-rings-3.png";
-import circle3 from "../assets/art-circle-3.png";
-import rings4 from "../assets/art-rings-4.png";
-import circle4 from "../assets/art-circle-4.png";
+import ring from "@/assets/art-rings.webp";
+import circle from "@/assets/art-circle.webp";
+// @ts-ignore
+import { hexToFilterFunc } from "@/helpers/hexToFilter.js";
+import { projects } from "@/data";
 
 interface BackgroundProps {
   activeBackgroundClassNames: string[];
@@ -21,29 +18,29 @@ const Background: React.FC<BackgroundProps> = ({
   isActive,
   currentPage,
 }) => {
+  const colors = projects.map((p) => p.circleColor);
+
   const ringsActiveClass =
     "animation fixed left-[-15vh] top-[-10dvh] w-[40vh] ";
   const ringsInactiveClass =
-    ringsActiveClass + "animation-from-left-100-inactive";
+    ringsActiveClass + " animation-from-left-100-inactive";
   const ringsActiveClass2 =
-    "animation fixed left-[85vh] top-[-10dvh] w-[30vh] ";
+    "animation fixed left-[85vh] top-[-10dvh] w-[30vh] " +
+    hexToFilterFunc(colors[currentPage - 1].colorR2);
   const ringsInactiveClass2 =
-    ringsActiveClass2 + "animation-from-top-100-inactive";
+    ringsActiveClass2 + " animation-from-top-100-inactive";
   const circleActiveClass =
-    "animation fixed left-[80dvw] top-[70dvh] w-[40vh] ";
+    "animation fixed left-[80dvw] top-[70dvh] w-[40vh] " +
+    hexToFilterFunc(colors[currentPage - 1].colorC1);
   const circleInactiveClass =
-    circleActiveClass + "animation-from-down-100-inactive";
-  const circleArr = [circle1, circle2, circle3, circle4];
-  const ringsArr = [rings1, rings2, rings3, rings4];
-  const circle = circleArr[currentPage - 1];
-  const rings = ringsArr[currentPage - 1];
+    circleActiveClass + " animation-from-down-100-inactive";
   return (
     <>
       {/* TOP-LEFT  */}
       <div
         className={
           isActive
-            ? activeBackgroundClassNames[0]
+            ? activeBackgroundClassNames[0] + ` bg-p${currentPage}-bg-1`
             : inactiveBackgroundClassNames[0]
         }
       ></div>
@@ -51,7 +48,7 @@ const Background: React.FC<BackgroundProps> = ({
       <div
         className={
           isActive
-            ? activeBackgroundClassNames[1]
+            ? activeBackgroundClassNames[1] + ` bg-p${currentPage}-bg-2`
             : inactiveBackgroundClassNames[1]
         }
       ></div>
@@ -59,7 +56,7 @@ const Background: React.FC<BackgroundProps> = ({
       <div
         className={
           isActive
-            ? activeBackgroundClassNames[2]
+            ? activeBackgroundClassNames[2] + ` bg-p${currentPage}-bg-3`
             : inactiveBackgroundClassNames[2]
         }
       ></div>
@@ -67,26 +64,46 @@ const Background: React.FC<BackgroundProps> = ({
       <div
         className={
           isActive
-            ? activeBackgroundClassNames[3]
+            ? activeBackgroundClassNames[3] + ` bg-p${currentPage}-bg-4`
             : inactiveBackgroundClassNames[3]
         }
       ></div>
+      {/* /RING 1  */}
       <img
-        src={rings}
+        src={ring}
         alt=""
-        className={isActive ? ringsActiveClass : ringsInactiveClass}
+        className={
+          isActive
+            ? ringsActiveClass + ` style-link-${currentPage}`
+            : ringsInactiveClass
+        }
+        style={{ filter: hexToFilterFunc(colors[currentPage - 1].colorR1) }}
+        aria-hidden
       />
+      {/* /RING 2  */}
       <img
-        src={rings}
+        src={ring}
         alt=""
-        className={isActive ? ringsActiveClass2 : ringsInactiveClass2}
+        className={
+          isActive
+            ? ringsActiveClass2 + ` style-link-${currentPage}`
+            : ringsInactiveClass2
+        }
+        style={{ filter: hexToFilterFunc(colors[currentPage - 1].colorR2) }}
+        aria-hidden
       />
+      {/* CIRCLE 1 */}
       <img
         src={circle}
         alt=""
-        className={isActive ? circleActiveClass : circleInactiveClass}
+        className={
+          isActive
+            ? circleActiveClass + ` style-link-${currentPage}`
+            : circleInactiveClass
+        }
+        style={{ filter: hexToFilterFunc(colors[currentPage - 1].colorC1) }}
+        aria-hidden
       />
-      <div></div>
     </>
   );
 };

@@ -3,6 +3,7 @@ import pic1 from "../assets/nomad-comp.png";
 import pic2 from "../assets/sweet-comp.png";
 import pic3 from "../assets/block-comp-phone.png";
 import pic4 from "../assets/solar-comp.png";
+import pic5 from "../assets/rideMockup1200.webp";
 import noPic from "../assets/no-pic.jpg";
 
 interface PictureProps {
@@ -15,6 +16,7 @@ const getPic = (currentPage: number) => {
   if (currentPage === 2) return pic2;
   if (currentPage === 3) return pic3;
   if (currentPage === 4) return pic4;
+  if (currentPage === 5) return pic5;
   return noPic;
 };
 

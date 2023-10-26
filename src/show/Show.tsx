@@ -1,4 +1,4 @@
-import { backgroundLayout, projects } from "@/data";
+import { projects } from "@/data";
 import Title from "./Title";
 import Description from "./Description";
 import Stack from "./Stack";
@@ -13,6 +13,7 @@ interface ShowProps {
 }
 
 const Show: React.FC<ShowProps> = ({ currentPage, isActive }) => {
+  const backgroundLayout = projects.map((p) => p.backgroundLayout);
   const project = projects[currentPage - 1];
   const activeBackgroundClassNames = backgroundLayout[currentPage - 1]; //animatioin class sets up elemet properties when active
   const inactiveBackgroundClassNames = activeBackgroundClassNames.map(

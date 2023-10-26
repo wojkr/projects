@@ -13,13 +13,14 @@ const List = () => {
           My Projects
         </h2>
         <a
-          href="https://wojkr.github.io/portfolio-page/#contact"
+          href="https://wojkr.github.io/portfolio/#contact"
           target="_blank"
           className="style-link rounded-ss-full bg-secondary-500 p-3 pl-10 text-main-black hover:text-main-white"
         >
           CONTACT ME!
         </a>
       </div>
+      <div className="WHITEicon"></div>
       <div className="mt-10 space-y-8">
         {projects.map((project, index) => (
           <a
