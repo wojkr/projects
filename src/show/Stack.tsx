@@ -7,7 +7,7 @@ interface StackProps {
 
 const Stack: React.FC<StackProps> = ({ stackList, currentPage, isActive }) => {
   const activeClass =
-    `animation delay-300 text-right font-marker style-stack` +
+    `text-lg leading-relaxed animation delay-300 text-right font-marker style-stack` +
     ` text-p${currentPage}-stack`;
   const inactiveClass = activeClass + " animation-small-from-top-inactive";
   return (

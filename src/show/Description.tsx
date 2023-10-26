@@ -11,7 +11,7 @@ const Description: React.FC<DescriptionProps> = ({
   currentPage,
   isActive,
 }) => {
-  const activeClass = `animation delay-[400ms] my-[30px] xs:my-0 style-text style-text-${currentPage} text-p${currentPage}-text`;
+  const activeClass = `text-lg leading-relaxed animation delay-[400ms] my-[30px] xs:my-0 style-text style-text-${currentPage} text-p${currentPage}-text`;
   const inactiveClass = activeClass + " animation-small-from-top-inactive ";
   return <div className={isActive ? activeClass : inactiveClass}>{text}</div>;
 };
