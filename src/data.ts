@@ -41,6 +41,7 @@ export const projects = [
       "animation fixed left-[60%] top-[25%] z-0 h-[75%] w-[40%]",
     ],
     circleColor: { colorR1: "#1E5562", colorR2: "#35222f", colorC1: "#1E5562" },
+    serverUrl: "https://sweet-app-try.onrender.com/desserts",
   },
   {
     name: "BLOCK BREAKER",
@@ -92,5 +93,6 @@ export const projects = [
       "animation fixed left-[50%] top-[33%] z-0 h-[67%] w-[50%]",
     ],
     circleColor: { colorR1: "#FFFFFF", colorR2: "#CFF1F8", colorC1: "#CFF1F8" },
+    serverUrl: "https://ride-rite-server.onrender.com/api/items",
   },
 ];

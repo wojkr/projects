@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Show from "./show/Show";
 import List from "./list/List";
+import triggerSpinUp from "./helpers/triggerSpinUp";
 
 function App() {
+  triggerSpinUp();
   const [currentPage, setCurrentPage] = useState(
     Number(window.location.hash.slice(1))
   );
