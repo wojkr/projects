@@ -6,26 +6,30 @@ import { hexToFilterFunc } from "@/helpers/hexToFilter.js";
 import { projects } from "@/data";
 
 interface BackgroundProps {
-  activeBackgroundClassNames: string[];
-  inactiveBackgroundClassNames: string[];
   isActive: boolean;
   currentPage: number;
 }
 
-const Background: React.FC<BackgroundProps> = ({
-  activeBackgroundClassNames,
-  inactiveBackgroundClassNames,
-  isActive,
-  currentPage,
-}) => {
+const Background: React.FC<BackgroundProps> = ({ isActive, currentPage }) => {
+  const backgroundLayout = projects.map((p) => p.backgroundLayout);
+  const activeBackgroundClassNames = backgroundLayout[currentPage - 1]; //animatioin class sets up elemet properties when active
+  const inactiveBackgroundClassNames = activeBackgroundClassNames.map(
+    (a, index) => {
+      const first = " animation-from-";
+      const last = "-100-inactive";
+      const from = ["top", "right", "left", "down"];
+      return a + first + from[index] + last;
+    }
+  );
+
   const colors = projects.map((p) => p.circleColor);
 
   const ringsActiveClass =
-    "animation fixed left-[-15vh] top-[-10dvh] w-[40vh] ";
+    "animation fixed left-[-15dvw] top-[-10dvh] w-[40vh] ";
   const ringsInactiveClass =
     ringsActiveClass + " animation-from-left-100-inactive";
   const ringsActiveClass2 =
-    "animation fixed left-[85vh] top-[-10dvh] w-[30vh] " +
+    "animation fixed left-[85dvw] top-[-10dvh] w-[30vh] " +
     hexToFilterFunc(colors[currentPage - 1].colorR2);
   const ringsInactiveClass2 =
     ringsActiveClass2 + " animation-from-top-100-inactive";

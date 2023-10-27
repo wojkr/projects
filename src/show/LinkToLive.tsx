@@ -23,7 +23,7 @@ const LinkToLive: React.FC<LinkToLiveProps> = ({
   const colorLink = colors[`p${currentPage}-link`];
   const colorLinkHover = colors[`p${currentPage}-link-hover`];
 
-  const activeClass = `text-lg leading-relaxed animation delay-500 flex flex-row justify-end text-p${currentPage}-link-text`;
+  const activeClass = `xs:flex-grow-0 flex-grow-[1] text-lg leading-relaxed animation delay-500 flex flex-row justify-end text-p${currentPage}-link-text`;
   const inactiveClass = activeClass + " animation-small-from-top-inactive ";
 
   //logic to change icon color
@@ -56,18 +56,20 @@ const LinkToLive: React.FC<LinkToLiveProps> = ({
           }
         }}
       >
-        <div className="hidden w-[58px] cursor-pointer place-content-center pr-[0.4rem] xs:grid">
+        <div className="hidden w-[58px] cursor-pointer place-content-center xs:grid">
           <img src={linkPic} alt="" style={linkStyle} />
         </div>
         <p
-          className={` style-link-text style-link-text-${currentPage} font-marker text-p${currentPage}-link-text cursor-pointer`}
+          className={`style-link-text flex-grow-[1] p-1 text-sm xs:text-base style-link-text-${currentPage} font-marker text-p${currentPage}-link-text flex cursor-pointer items-center justify-center`}
         >
-          This project
-          <br /> is
-          <span className="text-[#000]" style={linkStyle}>
-            {" "}
-            LIVE
-          </span>
+          <div className="">
+            This project
+            <br /> is
+            <span className="text-[#000]" style={linkStyle}>
+              {" "}
+              LIVE
+            </span>
+          </div>
         </p>
       </a>
     </>

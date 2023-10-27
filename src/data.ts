@@ -17,7 +17,7 @@ export const projects = [
     ],
     circleColor: {
       colorR1: "#F5E9BE",
-      colorR2: "#ff9666",
+      colorR2: "#174C4F",
       colorC1: "#ff9666",
     },
   },
@@ -35,12 +35,12 @@ export const projects = [
     img: "https://wojkr.github.io/portfolio-page/static/media/project-4.3d2cadf94233f06eb2f9.jpg",
     stack: ["Node.js", "Express.js", "MongoDB", "APIs", "EJS"],
     backgroundLayout: [
-      "animation fixed left-0 top-0 z-0 w-[60%] h-[75%]",
-      "animation fixed left-[60%] top-0 z-0 h-[25%] w-[40%]",
-      "animation fixed left-0 top-[75%] h-[25%] w-[60%]",
-      "animation fixed left-[60%] top-[25%] z-0 h-[75%] w-[40%]",
+      "animation fixed left-0 top-0 z-0 w-[65%] h-[75%]",
+      "animation fixed left-[65%] top-0 z-0 h-[25%] w-[35%]",
+      "animation fixed left-0 top-[75%] h-[25%] w-[65%]",
+      "animation fixed left-[65%] top-[25%] z-0 h-[75%] w-[35%]",
     ],
-    circleColor: { colorR1: "#1E5562", colorR2: "#35222f", colorC1: "#1E5562" },
+    circleColor: { colorR1: "#1E5562", colorR2: "#cc1b28", colorC1: "#1E5562" },
     serverUrl: "https://sweet-app-try.onrender.com/desserts",
   },
   {
@@ -75,7 +75,7 @@ export const projects = [
       "animation fixed left-0 top-[33%] h-[67%] w-[70%]",
       "animation fixed left-[70%] top-[33%] z-0 h-[67%] w-[30%]",
     ],
-    circleColor: { colorR1: "#F4F3F0", colorR2: "#6477a5", colorC1: "#6477a5" },
+    circleColor: { colorR1: "#F4F3F0", colorR2: "#D6C287", colorC1: "#6477a5" },
   },
   {
     name: "RIDE RITE",

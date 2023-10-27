@@ -93,17 +93,13 @@ h6 {
   }
 
   .style-link-text {
-    padding: 0.4rem;
-    padding-left: 2.5rem;
-    border-start-start-radius: 9999px;
-    border: 2px solid;
-  }
-  .style-link-back {
-    padding: 0.4rem;
-    padding-left: 2.5rem;
     border: 2px solid;
     border-top: none;
-    border-end-start-radius: 9999px;
+    border-left: none;
+  }
+  .style-link-back {
+    border: 2px solid;
+    border-top: none;
   }
   .style-text {
     box-sizing: border-box;
@@ -126,17 +122,17 @@ h6 {
   }
   .style-link-text-2 {
     background-color: theme(colors.p2-bg-3);
-    border-color: theme(colors.p2-title);
+    border-color: theme(colors.p2-bg-3);
   }
   .style-link-back-2 {
     color: theme(colors.p2-bg-4);
     background-color: theme(colors.p2-bg-1);
-    border-color: theme(colors.p2-title);
+    border-color: theme(colors.p2-bg-3);
   }
 
   .style-link-text-3,
   .style-link-back-3 {
-    border-color: theme(colors.p3-bg-4);
+    border-color: theme(colors.p3-title);
     background-color: theme(colors.p3-bg-2);
   }
   .style-text-3 {
