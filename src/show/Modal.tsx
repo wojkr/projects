@@ -20,14 +20,14 @@ const Modal: React.FC<ModalProps> = ({ link, setShowModal }) => {
                   setShowModal(false);
                 }}
               >
-                <span className="block h-6 w-6 bg-transparent text-2xl text-black opacity-5 outline-none focus:outline-none">
+                <span className="block h-6 w-6 bg-transparent text-2xl text-black  outline-none focus:outline-none">
                   ×
                 </span>
               </button>
             </div>
             {/*body*/}
-            <div className="relative flex-auto p-6">
-              <p className="my-4 text-lg leading-relaxed">
+            <div className="relative flex-auto px-6 ">
+              <p className="font text-base leading-normal xs:text-lg xs:leading-relaxed">
                 The website you'll be redirected to may load slowly or appear
                 not ready. Once the content is loaded, it will be ready for use:
                 please refresh the website (press F5) and then start to explore.
@@ -37,16 +37,16 @@ const Modal: React.FC<ModalProps> = ({ link, setShowModal }) => {
               </p>
             </div>
             {/*footer*/}
-            <div className="border-blueGray-200 flex items-center justify-end p-6">
+            <div className="border-blueGray-200 flex  items-center justify-end p-6 font-title">
               <button
-                className="background-transparent mb-1 mr-1 px-6 py-2 text-sm font-bold uppercase text-red-500 outline-none transition-all duration-150 ease-linear focus:outline-none"
+                className="background-transparent mb-1 mr-1 px-6 py-2 text-lg font-bold uppercase text-red-500 outline-none transition-all duration-150 ease-linear focus:outline-none"
                 type="button"
                 onClick={() => setShowModal(false)}
               >
                 Close
               </button>
               <button
-                className="mb-1 mr-1 bg-emerald-500 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-emerald-600"
+                className="mb-1 mr-1 bg-emerald-500 px-6 py-3 text-lg font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-emerald-600"
                 type="button"
                 onClick={() => {
                   setShowModal(false);
