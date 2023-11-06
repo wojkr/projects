@@ -79,14 +79,6 @@ h6 {
   padding: 0.2rem 0.8rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #fff;
-    @apply text-main-white;
-    @apply bg-main-dark;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .title {
     font-size: 2rem;

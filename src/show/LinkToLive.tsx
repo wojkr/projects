@@ -52,7 +52,7 @@ const LinkToLive: React.FC<LinkToLiveProps> = ({
           if (projects[currentPage - 1]?.serverUrl) {
             setShowModal(true);
           } else {
-            window.open(link);
+            window.open(link, "_blank", "noopener");
           }
         }}
       >
