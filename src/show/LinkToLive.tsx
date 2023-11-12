@@ -59,7 +59,7 @@ const LinkToLive: React.FC<LinkToLiveProps> = ({
         <div className="hidden w-[58px] cursor-pointer place-content-center xs:grid">
           <img src={linkPic} alt="" style={linkStyle} />
         </div>
-        <p
+        <div
           className={`style-link-text flex-grow-[1] p-1 text-sm xs:text-base style-link-text-${currentPage} font-marker text-p${currentPage}-link-text flex cursor-pointer items-center justify-center`}
         >
           <div className="">
@@ -70,7 +70,7 @@ const LinkToLive: React.FC<LinkToLiveProps> = ({
               LIVE
             </span>
           </div>
-        </p>
+        </div>
       </a>
     </>
   );

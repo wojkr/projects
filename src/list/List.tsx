@@ -20,28 +20,27 @@ const List = () => {
           CONTACT ME!
         </a>
       </div>
-      <div className="WHITEicon"></div>
-      <div className="mt-10 space-y-8">
+      <div className="my-10 space-y-8">
         {projects.map((project, index) => (
           <a
             key={index}
             href={"/projects" + project.url}
             rel="noopener noreferrer"
-            className="block bg-white/60  font-normal transition duration-300 ease-in-out hover:bg-white md:rounded-s-full"
+            className="block bg-white/60 px-2 py-4 font-normal transition duration-300 ease-in-out hover:bg-white xs:px-6 md:rounded-s-full md:p-0"
           >
-            <div className={`flex`}>
-              <div className="flex-shrink-0">
+            <div className="flex flex-col md:flex-row">
+              <div className="flex flex-shrink-0 justify-center p-0 md:block md:p-8 md:pr-0">
                 <img
                   className="h-20 w-20 rounded-none object-contain md:rounded-full"
                   src={project.img}
                   alt=""
                 />
               </div>
-              <div className="ml-4">
+              <div className="mt-4 text-center md:ml-4 md:mt-8 md:text-left">
                 <h3 className="text-lg font-medium leading-6 text-main-dark">
                   {project.name}
                 </h3>
-                <p className="mt-2 text-base leading-6 ">
+                <p className="text-base leading-6 ">
                   {project.shortDescription}
                 </p>
               </div>
