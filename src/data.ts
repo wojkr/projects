@@ -1,6 +1,8 @@
 export const projects = [
   {
+    index: 1,
     name: "NOMAD HIVE",
+    order: 2,
     shortDescription:
       "An online marketplace app built with React, Next.js, Prisma, and MongoDB",
     description:
@@ -22,7 +24,9 @@ export const projects = [
     },
   },
   {
+    index: 2,
     name: "SWEET APP",
+    order: 3,
     shortDescription:
       "Full stack website with interactive Map, authentication, user accounts, desserts section (CRUD)",
     description: `
@@ -32,7 +36,7 @@ export const projects = [
     Joi for validation.  `,
     url: "/#2",
     link: "https://sweet-app-try.onrender.com/",
-    img: "https://wojkr.github.io/portfolio-page/static/media/project-4.3d2cadf94233f06eb2f9.jpg",
+    img: "https://raw.githubusercontent.com/wojkr/projects/main/public/sweet.webp",
     stack: ["Node.js", "Express.js", "MongoDB", "APIs", "EJS"],
     backgroundLayout: [
       "animation fixed left-0 top-0 z-0 w-[65%] h-[75%]",
@@ -44,14 +48,16 @@ export const projects = [
     serverUrl: "https://sweet-app-try.onrender.com/desserts",
   },
   {
+    index: 3,
     name: "BLOCK BREAKER",
+    order: 4,
     shortDescription:
       "Game built from the scratch. 7game modes, 10 levels and 11 bonuses. Advanced collision model",
     description: `
     Block-Breaker is a simple game built from scratch using VanillaJS and CSS. It features 10 levels, 11 bonuses, 7 game modes, and control buttons for touchscreen devices. This was my first project. `,
     url: "/#3",
     link: "https://wojkr.github.io/block-breaker/",
-    img: "https://wojkr.github.io/portfolio-page/static/media/project-2.0fdcf5e9750555e4f0f3.jpg",
+    img: "https://raw.githubusercontent.com/wojkr/projects/main/public/block.webp",
     stack: ["pureCSS", "vanillaJS"],
     backgroundLayout: [
       "animation fixed left-0 top-0 z-0 w-[33%] h-[50%]",
@@ -62,12 +68,14 @@ export const projects = [
     circleColor: { colorR1: "#4b8695", colorR2: "#4b8695", colorC1: "#ff5662" },
   },
   {
+    index: 4,
     name: "SOLAR SYSTEM",
+    order: 5,
     shortDescription: "An animation of the solar system without JavaScript.",
     description: `An animation of the solar system without JavaScript. My first go with SASS. Showcased creativity in design.`,
     url: "/#4",
     link: "https://wojkr.github.io/pureCSS-solar-system/",
-    img: "https://wojkr.github.io/portfolio-page/static/media/project-3.089119f3cb768abf68cd.jpg",
+    img: "https://raw.githubusercontent.com/wojkr/projects/main/public/solar.webp",
     stack: ["CSS", "SASS", "problemSolving"],
     backgroundLayout: [
       "animation fixed left-0 top-0 z-0 w-[70%] h-[33%]",
@@ -78,13 +86,15 @@ export const projects = [
     circleColor: { colorR1: "#F4F3F0", colorR2: "#D6C287", colorC1: "#6477a5" },
   },
   {
+    index: 5,
     name: "RIDE RITE",
+    order: 1,
     shortDescription:
       "React Responsive Fullstack Ecommerce App, with Strapi CMS",
     description: `This online bicycle shop simulation allows users to easily browse through a catalog of products, add them to their cart, and securely make payments using the Stripe payment processing platform. I've also included advanced validation tools like Formik and Yup to ensure the safety and security of user information.`,
     url: "/#5",
     link: "https://wojkr.github.io/ride-rite-client",
-    img: "https://raw.githubusercontent.com/wojkr/portfolio/master/src/assets/ride-550.webp",
+    img: "https://raw.githubusercontent.com/wojkr/projects/main/public/ride.webp",
     stack: ["React", "Redux", "StrapiCMS", "StripePayment", "MUI"],
     backgroundLayout: [
       "animation fixed left-0 top-0 z-0 w-[50%] h-[75%]",
